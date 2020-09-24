@@ -1,4 +1,4 @@
-var goal = 69;
+var goal = 45;
 var count = 1;
 var x = "";
 

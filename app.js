@@ -1,5 +1,6 @@
-var count = 1
-var x = ""
+var goal = 69;
+var count = 1;
+var x = "";
 
 // Generate Random Number 
 function random() {
@@ -10,13 +11,13 @@ function random() {
 
 // Check if random number=goal number
 function check() {
-    if (x !== 69) {
+    if (x !== goal) {
         x = (Math.floor(Math.random() * 1000) + 1);
         count++;
         random()
     }
     else {
-        console.log("Ya made it to 69 in " + count + " tries")
-        alert("Ya made it to 69 in " + count + " tries")
+        console.log("Ya made it to " + goal + " in " + count + " tries")
+        alert("Ya made it to " + goal + " in " + count + " tries")
     }
 } 

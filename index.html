@@ -4,6 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <title>Shteve.dev</title>
@@ -11,14 +24,27 @@
 
 <body onload="random();">
     <div class="display">
-        <div class="box">
-            <h1 class="title">Zoom Info</h1>
-            <a href="https://us02web.zoom.us/j/88622528589" target="_blank">Join Zoom Meeting</a>
-            <p>Meeting ID: 886 2252 8589</p>
+        <div class="jumbotron jumbotron-fluid" style="text-align: center;">
+            <div class="container">
+                <h1 class="display-4" >Shteve.dev</h1>
+                <div class="box">
+                    <p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapse" role="button"
+                            aria-expanded="false" aria-controls="collapse">
+                            Zoom Info
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapse">
+                        <div class="card card-body">
+                            <p>Meeting ID: 886 2252 8589</p>
+                            <a href="https://us02web.zoom.us/j/88622528589" target="_blank">Click Here to Join</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="box">
-            <h1 class="title">Sample Div 2</h1>
-        </div>
+    </div>
         <div class="result">
 
         </div>

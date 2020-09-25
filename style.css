@@ -1,17 +1,17 @@
 .title {
     text-align: center;
-    color: rgba(255,200,20,1);
+    color: rgba(255, 200, 20, 1);
 }
 
-.display{
-    margin: 5% auto;
+.display {
+    margin: 2% auto;
     display: block;
     width: 25%;
 }
 
 .box {
     text-align: center;
-    margin:auto;
+    margin: auto;
     display: inline-block;
     box-sizing: border-box;
     width: 75%;
@@ -22,6 +22,55 @@ a {
 }
 
 .jumbotron {
-    padding: 5%;
+    padding: 2% 0;
     margin: 0%;
+    border-radius: 25px;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+
+.jumbotron:hover {
+    background-color: rgba(10, 10, 10, 1);
+    color: rgba(255, 10, 10, 1);
+}
+
+.btn {
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0);
+    border: rgba(10, 10, 10, 0);
+    color: rgba(10, 10, 10, 1);
+}
+
+.jumbotron:hover .btn {
+    background-color: rgba(10, 10, 10, 0);
+    border: rgba(10, 10, 10, 0);
+    color: rgba(255, 10, 10, 1);
+}
+
+.btn:active, .btn:focus {
+    background-color: rgba(10, 10, 10, 0) !important;
+    border: rgba(10, 10, 10, 0) !important;
+    color: rgba(255, 10, 10, 1) !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn:focus {
+    background-color: rgba(10, 10, 10, 0) !important;
+    border: rgba(10, 10, 10, 0) !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.card {
+    color: rgba(10, 10, 10, 1);
+    background-color: rgb(229, 255, 229);
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+
+.link {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2vw;
 }

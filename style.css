@@ -1,3 +1,9 @@
+body {
+    background: url(Assets/0Shteve.jpg) no-repeat center center fixed;
+    background-size: auto 100%;
+    background-color: darkgrey;
+}
+
 .title {
     text-align: center;
     color: rgba(255, 200, 20, 1);
@@ -90,11 +96,9 @@ a {
     body {
         background-color: rgb(229, 255, 255);
     }
-
     .mail {
         display: none;
     }
-
     .display-4 {
         font-size: 8vmax;
     }

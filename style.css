@@ -74,3 +74,39 @@ a {
     font-family: 'Permanent Marker', cursive;
     font-size: 2vw;
 }
+
+.shannon {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: lightblue;
+    text-align: center;
+}
+
+@media only screen and (max-width:1220px) {
+    .display-4 {
+        font-size: 8vmax;
+    }
+    .display {
+        margin: 10% auto;
+        display: block;
+        width: 75%;
+    }
+    .jumbotron {
+        width: 100%;
+    }
+
+    .link{
+        font-size: 10vw;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .display {
+        width: 100%;
+    }
+    .jumbotron {
+        width: 100%;
+    }
+}

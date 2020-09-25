@@ -87,30 +87,34 @@ a {
 }
 
 @media only screen and (max-width:1220px) {
-body {
-    background-color: rgb(229, 255, 255);
-}
+    body {
+        background-color: rgb(229, 255, 255);
+    }
+
+    .mail {
+        display: none;
+    }
 
     .display-4 {
         font-size: 8vmax;
     }
     .display {
-        margin: 10% auto;
+        margin: 5% auto;
         display: block;
-        width: 75%;
+        width: 90%;
     }
     .jumbotron {
         width: 100%;
     }
-
-    .link{
+    .link {
         font-size: 10vw;
     }
 }
 
 @media only screen and (max-width:800px) {
     .display {
-        width: 100%;
+        margin: 5% 5%;
+        width: 90%;
     }
     .jumbotron {
         width: 100%;

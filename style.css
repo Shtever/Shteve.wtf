@@ -94,6 +94,17 @@ a {
     font-weight: 900;
 }
 
+
+.beercard {
+    margin: 1vh;
+    background-color: aqua;
+    border-radius: 100px;
+    padding: 1vh;
+}
+
+
+
+/* TABLET */
 @media only screen and (max-width:1220px) {
     body {
         background-color: rgb(229, 255, 255);
@@ -117,6 +128,8 @@ a {
     }
 }
 
+
+/* MOBILE PHONE */
 @media only screen and (max-width:800px) {
     .display {
         margin: 5% 5%;

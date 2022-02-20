@@ -12,13 +12,32 @@ function submit(){
 
 
 function beerSearch() {
-    // Beer by ID
-    // var queryURL = "https://api.untappd.com/v4/beer/info/16630?" + "&" + clientID
 
-    // Beer by search term
-    var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerName.value + "&limit=50&" + clientID
 
-    // Ajax call for lat/long based on user IP address //
+    // BEER BY ID //
+    // var queryURL = "https://api.untappd.com/v4/beer/info/16630?" + "&" + clientID //
+
+
+
+    // BEER BY SEARCH TERM //
+    // var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerName.value + "&limit=50&" + clientID //
+
+    // Ajax call to Untappd //
+    // $.ajax({
+    //     url: queryURL,
+    //     method: "GET"
+    // }).then(function (response) {
+    //     console.log(response.response)
+    // })
+
+
+
+
+    // USER INFO //
+    var userName = "Quille"
+    var queryURL = "https://api.untappd.com/v4/user/info/" + userName + "?" + clientID 
+
+    // Ajax call to Untappd //
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -26,3 +45,5 @@ function beerSearch() {
         console.log(response.response)
     })
 }
+
+

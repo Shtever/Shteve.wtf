@@ -6,9 +6,9 @@ var clientID = "client_id=FC8119633681CAC495EBE7A545DFE9E44106539F&client_secret
 
 document.onload = userInfo();
 
-
+//SUBMIT BUTTON
 function submit() {
-    console.clear()
+    // console.clear()
     var beerName = document.getElementById('beerName').value;
     console.log(beerName);
     beerSearch();
@@ -20,7 +20,7 @@ function beerSearch() {
     // var queryURL = "https://api.untappd.com/v4/beer/info/16630?" + "&" + clientID //
 
     // BEER BY SEARCH TERM //
-    var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerName.value + "&limit=50&sort=beer_name&" + clientID
+    var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerName.value + "&limit=20&sort=beer_name&" + clientID
 
     // Ajax call to Untappd
     $.ajax({
@@ -34,7 +34,7 @@ function beerSearch() {
 // USER INFO //
 function userInfo() {
     //Usernames//
-    var userName = ["Mr_JFlow", "Quille","Shtevetm"]
+    var userName = ["Mr_JFlow", "Quille"]
     for (let i = 0; i<userName.length; i++){
     var queryURL = "https://api.untappd.com/v4/user/info/" + userName[i] + "?" + clientID
 
@@ -44,9 +44,12 @@ function userInfo() {
         method: "GET"
     }).then(function (response) {
         var userNameResult = response.response.user.user_name
-        var beerNameResult = response.response.user.recent_brews.items[0].beer.beer_name
+        var beerNameResult = response.response.user.checkins.items[0].beer.beer_name
+        var stamp = response.response.user.checkins.items[0].created_at
         console.log(userNameResult);
         console.log(beerNameResult);
+        console.log(stamp)
+        console.log("~~~~~~~~~~~~")
     });
     }
 

@@ -33,8 +33,12 @@ function beerSearch() {
 
 // USER INFO //
 function userInfo() {
-    //Usernames//
-    var userName = ["Mr_JFlow", "Quille"]
+    //Single username (For testing - so we don't hit API call limit)
+    var userName = ["Mr_JFlow"]
+
+    //Full array of Usernames
+    // var userName = ["Mr_JFlow", "Quille", "Shtevetm"]
+    
     for (let i = 0; i<userName.length; i++){
     var queryURL = "https://api.untappd.com/v4/user/info/" + userName[i] + "?" + clientID
 

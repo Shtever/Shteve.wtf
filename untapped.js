@@ -49,9 +49,11 @@ function userInfo() {
     }).then(function (response) {
         var userNameResult = response.response.user.user_name
         var beerNameResult = response.response.user.checkins.items[0].beer.beer_name
+        var breweryNameResult = response.response.user.checkins.items[0].brewery.brewery_name
         var stamp = response.response.user.checkins.items[0].created_at
         console.log(userNameResult);
         console.log(beerNameResult);
+        console.log(breweryNameResult);
         console.log(stamp)
         console.log("~~~~~~~~~~~~")
     });

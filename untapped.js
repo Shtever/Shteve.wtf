@@ -28,9 +28,9 @@ function beerSearch() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var beerResult = response.response.beers.items[0].beer;
-        console.log(beerResult)
-        console.log(result.result)
+        var beerResult = response.response.beers.items[0];
+        console.log(beerResult.beer.beer_name)
+        console.log(beerResult.brewery.brewery_name)
         setTimeout(addElement(), 1000)
         function addElement() {
             // create a new div element
@@ -38,10 +38,12 @@ function beerSearch() {
             newDiv.className = "beerResult"
 
             // // and give it some content
-            const newContent = document.createTextNode(beerResult.beer_name);
+            const newContent1 = document.createTextNode(beerResult.beer.beer_name);
+            const newContent2 = document.createTextNode(beerResult.brewery.brewery_name);
 
             // // add the text node to the newly created div
-            newDiv.appendChild(newContent);
+            newDiv.appendChild(newContent1);
+            newDiv.appendChild(newContent2);
 
             // add the newly created element and its content into the DOM
             const currentDiv = document.getElementById("div1");

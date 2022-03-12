@@ -1,5 +1,7 @@
 body {
-    background: url(Assets/0Shteve.jpg) no-repeat center center fixed;
+    /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
+    background: url(Assets/Foam.jpeg) no-repeat center center fixed;
+
     background-size: auto 100%;
     background-color: darkgrey;
     opacity: .90;
@@ -95,7 +97,7 @@ a {
 }
 
 
-.beercard {
+.beercard, .beerResult {
     margin: 1vh;
     background-color: aqua;
     border-radius: 100px;

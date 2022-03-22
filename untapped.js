@@ -4,8 +4,8 @@ var beerResult = ""
 // $(document).ready(userInfo())
 
 
-
-document.onload = userInfo();
+//COMMENTED OUT TO SAVE API CALL LIMIT
+// document.onload = userInfo();
 
 //SUBMIT BUTTON
 function submit() {
@@ -29,25 +29,51 @@ function beerSearch() {
         method: "GET"
     }).then(function (response) {
         var beerResult = response.response.beers.items[0];
-        console.log(beerResult.beer.beer_name)
-        console.log(beerResult.brewery.brewery_name)
-        setTimeout(addElement(), 1000)
+        console.log(beerResult.beer.beer_name);
+        console.log(beerResult.brewery.brewery_name);
+        // console.log(beerResult.beer.beer_label)
+        console.log(beerResult)
+        addImage()
+        addElement();
+
+
         function addElement() {
+
+
             // create a new div element
             const newDiv = document.createElement("div");
+            const newImg = document.createElement("img");
+            const lineBreak = document.createElement("br");
             newDiv.className = "beerResult"
+            newImg.className = "beerResult"
 
             // // and give it some content
-            const newContent1 = document.createTextNode(beerResult.beer.beer_name);
-            const newContent2 = document.createTextNode(beerResult.brewery.brewery_name);
+            const beerContent = document.createTextNode(beerResult.beer.beer_name + " ");
+            const breweryContent = document.createTextNode(beerResult.brewery.brewery_name + " ");
+            const beerDescription = document.createTextNode(beerResult.beer.beer_description);
 
             // // add the text node to the newly created div
-            newDiv.appendChild(newContent1);
-            newDiv.appendChild(newContent2);
+            newDiv.appendChild(beerContent);
+            newDiv.appendChild(lineBreak);
+            newDiv.appendChild(breweryContent);
+            newDiv.appendChild(lineBreak);
+            // newDiv.appendChild(beerDescription);
+
+
+
 
             // add the newly created element and its content into the DOM
             const currentDiv = document.getElementById("div1");
             document.body.insertBefore(newDiv, currentDiv);
+        }
+
+        function addImage() {
+            var x = document.createElement("img");
+            x.setAttribute("src", beerResult.beer.beer_label);
+            x.setAttribute("width", "304");
+            x.setAttribute("height", "228");
+            x.setAttribute("alt", beerResult.beer.beer_description);
+            document.body.appendChild(x);
         }
     })
 }

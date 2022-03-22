@@ -38,8 +38,6 @@ function beerSearch() {
 
 
         function addElement() {
-
-
             // create a new div element
             const newDiv = document.createElement("div");
             const newImg = document.createElement("img");
@@ -47,7 +45,7 @@ function beerSearch() {
             newDiv.className = "beerResult"
             newImg.className = "beerResult"
 
-            // // and give it some content
+            // // content for new div
             const beerContent = document.createTextNode(beerResult.beer.beer_name + " ");
             const breweryContent = document.createTextNode(beerResult.brewery.brewery_name + " ");
             const beerDescription = document.createTextNode(beerResult.beer.beer_description);
@@ -56,10 +54,8 @@ function beerSearch() {
             newDiv.appendChild(beerContent);
             newDiv.appendChild(lineBreak);
             newDiv.appendChild(breweryContent);
-            newDiv.appendChild(lineBreak);
+            // newDiv.appendChild(lineBreak);
             // newDiv.appendChild(beerDescription);
-
-
 
 
             // add the newly created element and its content into the DOM
@@ -68,11 +64,11 @@ function beerSearch() {
         }
 
         function addImage() {
-            var x = document.createElement("img");
-            x.setAttribute("src", beerResult.beer.beer_label);
-            x.setAttribute("width", "304");
-            x.setAttribute("height", "228");
-            x.setAttribute("alt", beerResult.beer.beer_description);
+            var label = document.createElement("img");
+            label.setAttribute("src", beerResult.beer.beer_label);
+            label.setAttribute("width", "304");
+            label.setAttribute("height", "228");
+            label.setAttribute("alt", beerResult.beer.beer_description);
             document.body.appendChild(x);
         }
     })

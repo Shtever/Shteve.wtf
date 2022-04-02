@@ -30,6 +30,7 @@ function beerSearch() {
     }).then(function (response) {
         var beerResult = response.response.beers.items[0];
         console.log(beerResult.beer.beer_name);
+        console.log(beerResult.beer.beer_description);
         console.log(beerResult.brewery.brewery_name);
         // console.log(beerResult.beer.beer_label)
         console.log(beerResult)
@@ -93,9 +94,15 @@ function userInfo() {
         }).then(function (response) {
             var userNameResult = response.response.user.user_name
             var beerNameResult = response.response.user.checkins.items[0].beer.beer_name
+            var beerStyleResult = response.response.user.checkins.items[0].beer.beer_style
+            var breweryResult = response.response.user.checkins.items[0].brewery.brewery_name
             var stamp = response.response.user.checkins.items[0].created_at
+            console.log("***Start API call***")
             console.log(userNameResult);
+            console.log(breweryResult);
             console.log(beerNameResult);
+            console.log("Style: " + beerStyleResult);
+
             console.log(stamp)
             console.log("~~~~~~~~~~~~")
         });

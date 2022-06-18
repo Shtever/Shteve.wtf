@@ -92,11 +92,12 @@ function userInfo() {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            var userNameResult = response.response.user.user_name
-            var beerNameResult = response.response.user.checkins.items[0].beer.beer_name
-            var beerStyleResult = response.response.user.checkins.items[0].beer.beer_style
-            var breweryResult = response.response.user.checkins.items[0].brewery.brewery_name
-            var stamp = response.response.user.checkins.items[0].created_at
+            const resp = response.response.user
+            const userNameResult = resp.user_name
+            const beerNameResult = resp.checkins.items[0].beer.beer_name
+            const beerStyleResult = resp.checkins.items[0].beer.beer_style
+            const breweryResult = resp.checkins.items[0].brewery.brewery_name
+            const stamp = resp.checkins.items[0].created_at
             console.log("***Start API call***")
             console.log(userNameResult);
             console.log(breweryResult);

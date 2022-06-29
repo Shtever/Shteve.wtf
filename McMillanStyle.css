@@ -1,7 +1,7 @@
 body {
     /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
     /* background: url(Assets/Foam.jpeg) no-repeat center center fixed; */
-    background: url(Assets/RoastBeefa.png) repeat-x;
+    background: url(Assets/roastbeefa.png) repeat-x;
     background-position: 50vw -5vw;
     background-size: 75% auto;
     background-color: darkgrey;
@@ -13,7 +13,7 @@ body {
 }
 
 .modal-content {
-    background: url(Assets/RoastBeefa.png) center;
+    background: url(Assets/roastbeefa.png) center;
     background-size: auto 120%;
     /* background-color: red; */
     border: 5px solid black;

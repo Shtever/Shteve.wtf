@@ -4,7 +4,14 @@ body {
 
     background-size: auto 100%;
     background-color: darkgrey;
-    opacity: .90;
+    opacity: 1;
+}
+
+
+#McMillan {
+    opacity: 1;
+    display: flex;
+    width: 100%;
 }
 
 

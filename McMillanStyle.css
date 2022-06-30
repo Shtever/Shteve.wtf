@@ -1,0 +1,109 @@
+body {
+    /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
+    /* background: url(Assets/Foam.jpeg) no-repeat center center fixed; */
+    background: url(./Assets/RoastBeef.png) repeat-x;
+    background-position: 50vw -5vw;
+    background-size: 75% auto;
+    background-color: darkgrey;
+    opacity: 1;
+}
+
+.modal {
+    border: none;
+}
+
+.modal-content {
+    background: url(./Assets/RoastBeef.png) center;
+    background-size: auto 120%;
+    /* background-color: red; */
+    border: 5px solid black;
+    border-radius: 1rem;
+}
+
+.modal-body {
+    background-color: rgba(200,200,200,.9);
+    border-radius: 1rem;
+    border:none;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+#McMillan {
+    opacity: 1;
+    display: flex;
+    margin: 1vw auto;
+    height: 30vw;
+    width: auto;
+}
+
+input {
+    display: block;
+    min-width: 70%;
+    margin: 0 auto .5vw auto;
+    border-radius: 10px;
+}
+
+.button1 {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
+.shannon {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* TABLET */
+@media only screen and (max-width:1220px) {
+    body {
+        background-color: rgb(229, 255, 255);
+    }
+
+    .mail {
+        display: none;
+    }
+
+    .display-4 {
+        font-size: 8vmax;
+    }
+
+    .display {
+        margin: 5% auto;
+        display: block;
+        width: 90%;
+    }
+
+    .jumbotron {
+        width: 100%;
+    }
+
+    .link {
+        font-size: 10vw;
+    }
+}
+
+
+/* MOBILE PHONE */
+@media only screen and (max-width:800px) {
+    .display {
+        margin: 5% 5%;
+        width: 90%;
+    }
+
+    .jumbotron {
+        width: 100%;
+    }
+}

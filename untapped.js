@@ -15,7 +15,6 @@ function submit() {
     beerSearch();
 }
 
-
 function beerSearch() {
     // BEER BY ID //
     // var queryURL = "https://api.untappd.com/v4/beer/info/16630?" + "&" + clientID //

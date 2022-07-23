@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Geraldine';
+    src: url(/Fonts/Geraldine.ttf);
+    src: local('Geraldine'),
+}
+
 body {
     /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
     /* background: url(Assets/Foam.jpeg) no-repeat center center fixed; */
@@ -6,24 +12,64 @@ body {
     background-size: 75% auto;
     background-color: darkgrey;
     opacity: 1;
+    transition-duration: 500ms;
 }
 
-.modal {
+.display {
+    padding: 0;
+    margin: 0;
+}
+
+.title, #enterButton{
+    font-family: 'Geraldine';
+    text-align: center;
+}
+
+#enterButton {
+    font-size: 4vw;
+}
+
+#pageTitle {
+    position: relative;
+    margin-top: 6vw;
+    font-size: 10vw;
+    line-height: 2vw;
+    z-index: -2;
+}
+
+#subTitle {
+    position: relative;
+    font-size: 3.8vw;
+    background-color: rgba(245, 245, 245, .8);
+    width: 65%;
+    margin: -5% auto 1% auto;
+    z-index: 0;
+    border-radius: 1rem;
+    line-height: 4vw;
+    border: 5px solid white;
+}
+
+.modal .modal2 {
     border: none;
 }
+
+.modal-backdrop {
+    opacity: .98 !important;
+}
+
+
 
 .modal-content {
     background: url(./Assets/RoastBeef.png) center;
     background-size: auto 120%;
-    /* background-color: red; */
     border: 5px solid black;
     border-radius: 1rem;
 }
 
 .modal-body {
-    background-color: rgba(200,200,200,.9);
+    background-color: rgba(200, 200, 200, .9);
     border-radius: 1rem;
-    border:none;
+    border: none;
 }
 
 .modal-footer {
@@ -31,11 +77,13 @@ body {
 }
 
 #McMillan {
+    position: relative;
     opacity: 1;
     display: flex;
     margin: 1vw auto;
     height: 30vw;
     width: auto;
+    z-index: -1;
 }
 
 input {
@@ -82,7 +130,6 @@ button {
 
     .display {
         margin: 5% auto;
-        display: block;
         width: 90%;
     }
 

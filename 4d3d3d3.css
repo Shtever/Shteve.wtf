@@ -42,12 +42,33 @@ body {
     top: -2vw;
 }
 
-.windowframe {
-    max-height: 100vh;
+.tayne {
+    height: 60vh; 
     width: auto;
+    padding: 8vw;
+    padding-bottom: 2vw;
+    position: relative;
+    left: -4vw;
+}
+
+.windowframe-l {
+    float: left;
+    max-height: 100vh;
+    width: 40%;
     margin: 0 0 0 5vw;
     background-image: url(Assets/Window.gif);
     background-size: 40vh;
+    background-repeat: no-repeat;
+    
+}
+
+.windowframe-r {
+    float: left;
+    max-height: 100vh;
+    width: 40%;
+    margin: 0 0 0 5vw;
+    background-image: url(Assets/Window.gif);
+    background-size: auto 100%;
     background-repeat: no-repeat;
 }
 

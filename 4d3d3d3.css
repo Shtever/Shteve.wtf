@@ -1,0 +1,63 @@
+body {
+    /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
+    background-size: auto 100%;
+    background-color: darkgrey;
+    opacity: 1;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.os-container {
+    margin: 1vw;
+    background-color: cadetblue;
+    display: inline-block;
+}
+
+.os {
+    color: darkblue;
+    margin: 1vw 1vw 0 1vw;
+    font-size: 3vw;
+    text-align: left;
+    padding: 1vw 1vw 0 1vw;
+    background-color: cadetblue;
+    display: inline-block;
+}
+
+.os-sub {
+    color: darkblue;
+    margin: 0 0 0 1vw;
+    font-size: 1vw;
+    text-align: center;
+    padding: 0 0 1vw 1vw;
+    background-color: cadetblue;
+    display: inline-block;
+}
+
+.celeryman {
+    height: 70vh; 
+    width: auto;
+    padding: 8vw;
+    padding-bottom: 2vw;
+    position: relative;
+    left: -8vw;
+    top: -2vw;
+}
+
+.windowframe {
+    max-height: 100vh;
+    width: auto;
+    margin: 0 0 0 5vw;
+    background-image: url(Assets/Window.gif);
+    background-size: 40vh;
+    background-repeat: no-repeat;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-weight: 900;
+}

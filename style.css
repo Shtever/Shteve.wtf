@@ -1,11 +1,12 @@
 body {
     /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
-    background: url(Assets/Foam.jpeg) no-repeat center center fixed;
-
-    background-size: auto 100%;
-    background-color: darkgrey;
+    background: url(Assets/JMcDermott.jpg) no-repeat center fixed;
+    background-size: auto;
+    background-position: center 25vh;
+    background-color: rgb(177, 167, 132);
     opacity: 1;
 }
+
 
 
 #McMillan {
@@ -23,8 +24,10 @@ body {
 .display {
     margin: 2% auto;
     display: block;
-    width: 25%;
+    width: 40vw;
     text-align: center;
+    animation-duration: 1s;
+
 }
 
 .box {
@@ -46,6 +49,7 @@ a {
     transition-property: all;
     transition-duration: .5s;
     transition-timing-function: linear;
+    background-color: rgb(253,228,198);
 }
 
 .jumbotron:hover {
@@ -82,6 +86,8 @@ a {
 }
 
 .card {
+    display: inline-flex;
+    width: 15%;
     color: rgba(10, 10, 10, 1);
     background-color: rgb(229, 255, 229);
     border-radius: 15px;
@@ -93,12 +99,12 @@ a {
     font-size: 2vw;
 }
 
-.shannon {
+.footer {
     position: fixed;
     left: 0;
-    bottom: 5%;
+    bottom: .1vh;
     width: 100%;
-    color: red;
+    color: rgb(253, 228, 198);
     text-align: center;
     font-weight: 900;
 }
@@ -116,22 +122,27 @@ a {
 /* TABLET */
 @media only screen and (max-width:1220px) {
     body {
-        background-color: rgb(229, 255, 255);
+        background-color: rgb(177, 167, 132);
     }
+
     .mail {
         display: none;
     }
+
     .display-4 {
         font-size: 8vmax;
     }
+
     .display {
         margin: 5% auto;
         display: block;
         width: 90%;
     }
+
     .jumbotron {
         width: 100%;
     }
+
     .link {
         font-size: 10vw;
     }
@@ -144,6 +155,7 @@ a {
         margin: 5% 5%;
         width: 90%;
     }
+
     .jumbotron {
         width: 100%;
     }

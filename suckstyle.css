@@ -16,8 +16,10 @@ body {
     .title {
         font-size: 20vw;
     }
+
     @media only screen and (max-width:800px) {
         .title {
             font-size: 20vw;
         }
     }
+}

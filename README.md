@@ -4,7 +4,7 @@ A collection of really stupid website ideas:
 
 Index.html: Landing page. Link to Zoom meeting room.
 TO DO:
-1. Add links to other pages.
+1. ~~Add links to other pages.~~
 
 McMillan.html:A joke site, based on the old "Ask Jeeves" search engine.
 TO DO:

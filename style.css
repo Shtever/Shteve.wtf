@@ -1,162 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Patua+One&family=Special+Elite&display=swap');
+/* 
+font-family: 'Archivo Black';
+font-family: 'Bree Serif';
+font-family: 'Patua One';
+font-family: 'Special Elite'; */
+
+:root {
+    --bluebg: rgba(0, 255, 255, .2);
+}
+
 body {
-    /* background: url(Assets/0Shteve.jpg) no-repeat center center fixed; */
-    background: url(Assets/JMcDermott.jpg) no-repeat center fixed;
-    background-size: auto;
-    background-position: center 25vh;
-    background-color: rgb(177, 167, 132);
-    opacity: 1;
+    background-image: url(./Assets/Paperbg.jpg);
+    font-family: 'Special Elite';
+    margin: 0;
+    margin-top: 0;
+    overflow: hidden;
 }
 
-
-
-#McMillan {
-    opacity: 1;
+header {
     display: flex;
-    width: 100%;
+    justify-content: center;
+    margin: 0;
+    height: 10vh
 }
 
-
-.title {
-    text-align: center;
-    color: rgba(255, 200, 20, 1);
+header nav, header .title {
+    background-color: rgba(0, 255, 255, .2);
 }
 
-.display {
-    margin: 2% auto;
-    display: block;
-    width: 40vw;
-    text-align: center;
-    animation-duration: 1s;
-
-}
-
-.box {
-    text-align: center;
-    margin: auto;
-    display: inline-block;
+header nav {
+    display: flex;
+    border: 5px solid black;
     box-sizing: border-box;
-    width: 75%;
+    font-size: 1rem;
+    align-items: center;
+    margin: 0;
+    width: 45%;
 }
 
-a {
-    display: contents;
-}
-
-.jumbotron {
-    padding: 2% 0;
-    margin: 0%;
-    border-radius: 25px;
-    transition-property: all;
-    transition-duration: .5s;
-    transition-timing-function: linear;
-    background-color: rgb(253,228,198);
-}
-
-.jumbotron:hover {
-    background-color: rgba(10, 10, 10, 1);
-    color: rgba(255, 10, 10, 1);
-}
-
-.btn {
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0);
-    border: rgba(10, 10, 10, 0);
-    color: rgba(10, 10, 10, 1);
 }
 
-.jumbotron:hover .btn {
-    background-color: rgba(10, 10, 10, 0);
-    border: rgba(10, 10, 10, 0);
-    color: rgba(255, 10, 10, 1);
-}
-
-.btn:active, .btn:focus {
-    background-color: rgba(10, 10, 10, 0) !important;
-    border: rgba(10, 10, 10, 0) !important;
-    color: rgba(255, 10, 10, 1) !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.btn:focus {
-    background-color: rgba(10, 10, 10, 0) !important;
-    border: rgba(10, 10, 10, 0) !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.card {
-    display: inline-flex;
-    width: 15%;
-    color: rgba(10, 10, 10, 1);
-    background-color: rgb(229, 255, 229);
-    border-radius: 15px;
-    margin-bottom: 5%;
-}
-
-.link {
-    font-family: 'Permanent Marker', cursive;
+nav li {
+    text-align: center;
+    padding: 50px;
     font-size: 2vw;
 }
 
-.footer {
+a {
+    /* border: 5px solid black;  */
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+}
+
+nav a, nav a:visited, a:visited {
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+.title {
+    border: 5px solid black;
+    box-sizing: border-box;
+    font-size: 11vh;
+    padding-top: 5px;
+    margin: 0;
+    width: 45%;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1603px;
+    max-height: 950px;
+    margin: 0 auto;
+    border: 5px solid black;
+    padding: 0 58px;
+    padding-bottom: 0;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    box-sizing: border-box;
+    margin: 10px auto;
+    width: 90%;
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card:nth-of-type(4) {
+    box-sizing: border-box;
+    grid-column: 3 /5;
+}
+
+.card-wide {
+    grid-column: 1 /7;
+    width: 100%;
+}
+
+img, h1, li, a, .card-text {
+    transition-property: filter;
+    transition-duration: .5s;
+}
+
+img:hover, li:hover, a:hover {
+    filter: invert(30%) sepia(100%) hue-rotate(300deg) brightness(80%) saturate(420%);
+}
+
+.card-wide .card-text {
+    box-sizing: border-box;
+    font-size: 4.5vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 70%;
+    left: -85%;
+
+}
+
+.card .card-text {
+    box-sizing: border-box;
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -5%;
+    right: 50%
+}
+
+footer, .footer {
     position: fixed;
     left: 0;
-    bottom: .1vh;
-    width: 100%;
-    color: rgb(253, 228, 198);
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    background-color: var(--bluebg);
+    color: black;
     text-align: center;
-    font-weight: 900;
-}
-
-
-.beercard, .beerResult {
-    margin: 1vh;
-    background-color: aqua;
-    border-radius: 100px;
-    padding: 1vh;
-}
-
-
-
-/* TABLET */
-@media only screen and (max-width:1220px) {
-    body {
-        background-color: rgb(177, 167, 132);
-    }
-
-    .mail {
-        display: none;
-    }
-
-    .display-4 {
-        font-size: 8vmax;
-    }
-
-    .display {
-        margin: 5% auto;
-        display: block;
-        width: 90%;
-    }
-
-    .jumbotron {
-        width: 100%;
-    }
-
-    .link {
-        font-size: 10vw;
-    }
-}
-
-
-/* MOBILE PHONE */
-@media only screen and (max-width:800px) {
-    .display {
-        margin: 5% 5%;
-        width: 90%;
-    }
-
-    .jumbotron {
-        width: 100%;
-    }
+    margin: 0 auto;
 }

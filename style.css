@@ -83,7 +83,6 @@ main {
     border: 5px solid black;
     padding: 0 58px;
     padding-bottom: 0;
-
 }
 
 .cards {
@@ -151,4 +150,82 @@ footer, .footer {
     color: black;
     text-align: center;
     margin: 0 auto;
+}
+
+@media (max-width: 1220px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    header {
+        display: inline;
+    }
+
+    .title {
+        font-size: 10vw;
+        padding-top: 3%;
+        border: none;
+        width: 100%;
+    }
+
+    header nav {
+        border: none;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 2%;
+        font-size: 3vw;
+    }
+
+
+    main {
+        width: 89.5%;
+        padding: 0;
+    }
+
+    .cards {
+        padding: 0;
+    }
+
+    .footer {
+        position: absolute;
+
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        box-sizing: border-box;
+        margin: 10px auto;
+        width: 90%;
+        justify-items: center;
+    }
+
+    .card-wide {}
+
+    .card {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+
+    .card-wide {
+        grid-column: 1 /7;
+        width: 100%;
+    }
+
+    .card:nth-of-type(4) {
+        box-sizing: border-box;
+        grid-column: 3 /5;
+    }
+
+    .card:nth-of-type(6) {
+        display: none;
+    }
+
 }

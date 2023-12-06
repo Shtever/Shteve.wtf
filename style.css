@@ -14,7 +14,7 @@ body {
     font-family: 'Special Elite';
     margin: 0;
     margin-top: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header {

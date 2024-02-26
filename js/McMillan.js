@@ -6,5 +6,6 @@ function submit() {
 
 
 function music() {
-    var audio1= document.getElementById("my_audio").play();
+    document.getElementById("my_audio").play();
+    document.getElementById("my_audio").volume = 0.3;
 }

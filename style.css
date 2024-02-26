@@ -141,15 +141,16 @@ img:hover, li:hover, a:hover {
 }
 
 footer, .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 90%;
+    width: 96%;
     background-color: var(--bluebg);
     color: black;
     text-align: center;
     margin: 0 auto;
+    bottom: -10px;
 }
 
 @media only screen and (max-width: 1400px) {

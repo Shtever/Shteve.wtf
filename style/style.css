@@ -10,7 +10,7 @@ font-family: 'Special Elite'; */
 }
 
 body {
-    background-image: url(./Assets/Paperbg.jpg);
+    background-image: url(../Assets/Paperbg.jpg);
     font-family: 'Special Elite';
     margin: 0;
     margin-top: 0;
@@ -141,16 +141,15 @@ img:hover, li:hover, a:hover {
 }
 
 footer, .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -4px;
     width: 96%;
     background-color: var(--bluebg);
     color: black;
     text-align: center;
     margin: 0 auto;
-    bottom: -10px;
 }
 
 @media only screen and (max-width: 1400px) {

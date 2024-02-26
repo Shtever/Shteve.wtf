@@ -21,3 +21,5 @@ function check() {
         // alert("Ya made it to " + goal + " in " + count + " tries")
     }
 } 
+
+random()

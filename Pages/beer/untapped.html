@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Untappd API test environment</title>
+  <link rel="stylesheet" href="beerstyle.css">
+</head>
+<body>
+  <header>
+    <h1>Beer Search & Latest Check-ins</h1>
+  </header>
+
+  <main>
+    <!-- Search form -->
+    <form id="beerForm" autocomplete="off">
+      <label for="beerName">Search a beer:</label>
+      <input id="beerName" type="text" placeholder="e.g., Two Hearted Ale" />
+      <button id="beerSubmit" type="submit">Search</button>
+    </form>
+
+    <!-- Anchor kept for compatibility with your original code -->
+    <div id="div1" style="display:none;"></div>
+
+    <!-- Results container (JS also creates this if missing) -->
+    <section id="results" aria-live="polite"></section>
+  </main>
+
+  <!-- Script -->
+  <script src="./untapped.js" defer></script>
+</body>
+</html>

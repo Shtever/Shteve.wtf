@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Patua+One&family=Special+Elite&display=swap');
+/* 
+font-family: 'Archivo Black';
+font-family: 'Bree Serif';
+font-family: 'Patua One';
+font-family: 'Special Elite';
+*/
+
+:root {
+  --bg: #f7f3ea;
+  --ink: #222;
+  --ink-soft: #555;
+  --muted: #8a8a8a;
+  --card: rgba(255, 255, 255, 0.88);
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 10px 26px rgba(0, 0, 0, 0.18);
+  --ring: 0 0 0 3px rgba(0, 0, 0, 0.08);
+  --gap: 1rem;
+  --radius: 16px;
+  --maxw: 1100px;
+  --lift: -3px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  background-image: url(../../Assets/Paperbg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--ink);
+  font-family: 'Special Elite', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 12vh;
+  margin: 0;
+}
+
+header h1 {
+  font-family: 'Archivo Black', 'Special Elite', sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+main {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 var(--gap);
+}
+
+/* ---------- Form ---------- */
+#beerForm {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+#beerForm label { font-weight: 600; }
+
+#beerForm input[type="text"] {
+  flex: 1 1 320px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+#beerForm input[type="text"]:focus {
+  border-color: #bbb;
+  box-shadow: var(--ring);
+}
+
+#beerForm button,
+#beerSubmit {
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .15s ease, opacity .2s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+#beerForm button:hover,
+#beerSubmit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+#beerForm button:active,
+#beerSubmit:active { transform: translateY(0); }
+
+/* ---------- Results container ---------- */
+#results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: stretch; /* same height within each row */
+}
+
+/* Cards (shared look + hover lift) */
+.beerResult,
+.userCheckin,
+.untappd-error {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.1rem;
+  backdrop-filter: blur(2px);
+  height: 100%;
+  transition: transform .18s ease, box-shadow .2s ease;
+}
+.beerResult:hover,
+.userCheckin:hover {
+  transform: translateY(var(--lift));
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---------- Beer search ---------- */
+.beerResult__header {
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+/* Brewery logo top-left with text wrap */
+.beerResult__img {
+  float: left;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 .85rem .6rem 0;
+  display: block;
+}
+
+/* Clear the float so the card contains the image height */
+.beerResult::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.beerResult__title {
+  font-family: 'Patua One', 'Special Elite', serif;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin-bottom: .25rem;
+}
+
+.beerResult__brewery {
+  color: var(--ink-soft);
+  margin-bottom: .5rem;
+}
+
+.beerResult__desc {
+  margin-top: .25rem;
+  color: var(--ink-soft);
+  font-size: .95rem;
+  line-height: 1.4;
+
+  /* clamp to keep uniform rows */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- User check-ins ---------- */
+.userCheckin__header {
+  grid-column: 1 / -1;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 1rem 0 .5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.userCheckin .userCheckin__user {
+  font-family: 'Bree Serif', 'Special Elite', serif;
+  font-size: 1.05rem;
+  margin-bottom: .35rem;
+}
+.userCheckin div + div {
+  margin-top: .15rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Errors ---------- */
+.untappd-error {
+  border-left: 4px solid #c0392b;
+  color: #8b1e12;
+}
+
+/* ---------- Utilities ---------- */
+#div1 { display: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 850px) {
+  #results { grid-template-columns: 1fr; }
+
+  main { margin: 1.25rem auto; }
+  header { height: auto; padding: 1rem 0; }
+
+  .beerResult__img {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0 0 .75rem 0;
+  }
+}

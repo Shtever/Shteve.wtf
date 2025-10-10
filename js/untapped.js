@@ -5,7 +5,7 @@ var beerResult = ""
 
 
 //COMMENTED OUT TO SAVE API CALL LIMIT
-// document.onload = userInfo();
+ document.onload = userInfo();
 
 //SUBMIT BUTTON
 function submit() {
@@ -109,4 +109,3 @@ function userInfo() {
     }
 
 }
-

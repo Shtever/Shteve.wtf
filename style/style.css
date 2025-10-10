@@ -126,7 +126,7 @@ img:hover, li:hover, a:hover {
     padding: 0;
     position: relative;
     top: 70%;
-    left: -85%;
+    right: 20%;
 
 }
 
@@ -213,11 +213,16 @@ footer, .footer {
 
 
     .card-wide {
-        grid-column: 1 /7;
+        grid-column: 1 /6;
         width: 100%;
     }
 
     .card:nth-of-type(4) {
+        box-sizing: border-box;
+        grid-column: 3 /5;
+    }
+
+    .card:nth-of-type(1) {
         box-sizing: border-box;
         grid-column: 3 /5;
     }
@@ -228,7 +233,7 @@ footer, .footer {
 
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
     main {
         border: none;
     }
@@ -272,5 +277,6 @@ footer, .footer {
         font-size: 8vw;
         color: red;
         text-shadow: 2px 2px white;
+        right: 50%;
     }
 }

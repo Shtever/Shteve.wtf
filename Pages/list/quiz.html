@@ -7,26 +7,7 @@
     <title>150 Item List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    const inputs = document.querySelectorAll('input[type="text"]');
 
-    function saveData() {
-        const data = Array.from(inputs).map(input => input.value);
-        localStorage.setItem('matthewsList', JSON.stringify(data));
-    }
-
-    window.addEventListener('load', () => {
-        const savedData = JSON.parse(localStorage.getItem('matthewsList')) || [];
-
-        inputs.forEach((input, index) => {
-            if (savedData[index]) {
-                input.value = savedData[index];
-            }
-
-            input.addEventListener('input', saveData);
-        });
-    });
-</script>
 <body>
     <header>
         <h1>Matthew's List</h1>
@@ -186,6 +167,26 @@
             <li><input type="text" name="" id=""></li>
         </ol>
     </div>
+    <script>
+    const inputs = document.querySelectorAll('input[type="text"]');
+
+    function saveData() {
+        const data = Array.from(inputs).map(input => input.value);
+        localStorage.setItem('matthewsList', JSON.stringify(data));
+    }
+
+    window.addEventListener('load', () => {
+        const savedData = JSON.parse(localStorage.getItem('matthewsList')) || [];
+
+        inputs.forEach((input, index) => {
+            if (savedData[index]) {
+                input.value = savedData[index];
+            }
+
+            input.addEventListener('input', saveData);
+        });
+    });
+</script>
 </body>
 
 </html>

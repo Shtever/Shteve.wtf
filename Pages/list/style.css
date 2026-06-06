@@ -4,7 +4,8 @@ html {
 
 .list ol {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(30, auto);
+    grid-auto-flow: column;
     gap: 8px 20px;
     padding-left: 40px;
 }
